@@ -1,0 +1,5 @@
+version: '3.7'
+services:
+  evmos:
+    container_name: evmos
+    command: bash /evmos/local.sh

@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  evmos:
+    container_name: evmos
+    image: northroomza/evmos:11.0.2
+    environment:
+      - HOME=/evmos
+    ports:
+      - 26657:26657
+      - 26656:26656
+    volumes:
+      - ./build/evmosd:/evmos:Z
+    command: evmosd start --home /evmos/.evmosd/
